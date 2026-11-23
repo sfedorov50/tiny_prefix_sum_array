@@ -39,3 +39,10 @@ class is effectively immutable: construct a new one if your data changes.
 valid and return `0`. Non-numeric values raise `TypeError` at construction.
 The library stores only prefix sums, so you cannot recover the original
 sequence from a `PrefixSumArray`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
