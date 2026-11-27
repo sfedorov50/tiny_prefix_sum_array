@@ -1,6 +1,6 @@
 [project]
 name = "tiny-prefix-sum-array"
-version = "0.1.0"
+version = "0.1.1"
 description = "Answers range sum queries on static arrays in constant time after preprocessing."
 requires-python = ">=3.10"
 dependencies = []
